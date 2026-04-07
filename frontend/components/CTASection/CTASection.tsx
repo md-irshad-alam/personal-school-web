@@ -16,7 +16,7 @@ export default function CTASection() {
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
         >
           {/* Decorative blob */}
           <div className={styles.blob} aria-hidden="true" />

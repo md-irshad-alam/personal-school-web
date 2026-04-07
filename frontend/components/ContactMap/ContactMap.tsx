@@ -22,7 +22,7 @@ export default function ContactMap() {
             className={styles.infoCard}
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.2 }}
           >
             <h2 className={styles.title}>Our Location</h2>
             <p className={styles.subtitle}>

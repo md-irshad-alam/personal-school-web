@@ -76,7 +76,7 @@ export default function AcademicsHero() {
           className={styles.imageSection}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" as const }}
         >
           <div className={styles.imageWrapper}>
             <img 

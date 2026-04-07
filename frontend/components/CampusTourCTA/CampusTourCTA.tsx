@@ -15,7 +15,7 @@ export default function CampusTourCTA() {
           className={styles.ctaBox}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
         >
           <motion.h2
             className={styles.title}

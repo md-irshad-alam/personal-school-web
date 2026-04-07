@@ -15,7 +15,7 @@ export default function ApplicationForm() {
           className={styles.formCard}
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
         >
           <div className={styles.header}>
             <h2 className={styles.title}>Online Application</h2>

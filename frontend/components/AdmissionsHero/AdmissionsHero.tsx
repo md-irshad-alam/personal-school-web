@@ -70,7 +70,7 @@ export default function AdmissionsHero() {
           className={styles.imageWrapper}
           initial={{ opacity: 0, scale: 0.95, x: 20 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut" as const, delay: 0.2 }}
         >
           <img
             src="https://picsum.photos/seed/admissions/800/800"

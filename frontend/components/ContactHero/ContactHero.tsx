@@ -58,7 +58,7 @@ export default function ContactHero() {
           className={styles.imageWrapper}
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.1 }}
         >
           <img
             src="https://picsum.photos/seed/contacthero/800/800"

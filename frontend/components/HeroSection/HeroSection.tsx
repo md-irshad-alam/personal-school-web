@@ -84,7 +84,7 @@ export default function HeroSection() {
           className={styles.illustration}
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" as const }}
           aria-hidden="true"
         >
           <div className={styles.floatCard}>

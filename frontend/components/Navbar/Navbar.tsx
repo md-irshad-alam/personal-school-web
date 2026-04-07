@@ -31,7 +31,7 @@ export default function Navbar() {
       className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: "easeOut" as const }}
     >
       <div className={styles.inner}>
         {/* Logo */}

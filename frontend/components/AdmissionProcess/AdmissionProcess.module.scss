@@ -1,0 +1,133 @@
+.section {
+  margin: 0 auto;
+  
+  max-width: 1200px;
+}
+
+.container {
+  max-width: 1000px;
+  background: #f9fafb;
+ 
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+
+  h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 800;
+    color: var(--color-text);
+  }
+
+  p {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-top: var(--space-sm);
+  }
+}
+
+.stepperContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: var(--space-2xl);
+  }
+}
+
+/* Horizontal Line uniting the steps */
+.line {
+  position: absolute;
+  top: 32px; /* Half of circle size roughly + extra due to outer circle */
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, rgba(37,99,235,0.2) 100%);
+  transform-origin: left;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    top: 5%;
+    bottom: 5%;
+    left: 40px; /* Aligned with circle centers in column layout */
+    right: auto;
+    width: 2px;
+    height: 90%;
+    transform-origin: top;
+    background: linear-gradient(180deg, var(--color-primary) 0%, rgba(37,99,235,0.2) 100%);
+  }
+}
+
+.step {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  padding: 0 var(--space-md);
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    padding: 0;
+    gap: var(--space-lg);
+  }
+}
+
+/* Outer White Ring */
+.iconBoxOuter {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+  
+  /* Shadow to "cut through" the line behind it */
+  box-shadow: 0 0 0 10px var(--color-white), 0 10px 25px rgba(0,0,0,0.05);
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* Inner Colored Circle */
+.iconBoxInner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+
+  &.inactive {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--color-primary);
+  }
+}
+
+.stepTitle {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.stepDesc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}

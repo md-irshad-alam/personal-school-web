@@ -1,0 +1,164 @@
+.section {
+  padding: var(--space-3xl) var(--space-xl);
+  background: var(--color-bg-hero);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+
+  .titleBold {
+    font-weight: 800;
+  }
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card Light (Vision) */
+.cardLight {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.iconWrapperBlue {
+  width: 48px;
+  height: 48px;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.cardTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.cardText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  flex: 1;
+}
+
+.visionLink {
+  margin-top: var(--space-md);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Card Solid (Mission) */
+.cardSolid {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  color: var(--color-white);
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+  }
+}
+
+.iconWrapperWhite {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.cardTitleSolid {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.cardTextSolid {
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  width: 100%;
+
+  li {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+}
+
+.bulletDot {
+  width: 6px;
+  height: 6px;
+  background: var(--color-white);
+  border-radius: 50%;
+  flex-shrink: 0;
+}

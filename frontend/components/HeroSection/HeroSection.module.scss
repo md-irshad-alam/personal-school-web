@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: fit-content;
   overflow: hidden;
   background: var(--gradient-hero);
   display: flex;
